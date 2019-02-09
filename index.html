@@ -21,13 +21,18 @@
     <link rel="canonical" href="http://chrispanican.com/">
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-87491035-1', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-87491035-1', 'auto');
+        ga('send', 'pageview');
+
+        window.onload = function ageCalculator() {
+            var age = ~~ ((Date.now() - (+new Date('02/18/1997'))) / (31557600000));
+            document.getElementById('myAge').innerHTML = age;
+        }
     </script>
 </head>
 
@@ -38,14 +43,14 @@
 			<a id="logo-container" href="index.html" class="brand-logo">Chris Panican</a>
 			<ul class="right hide-on-med-and-down">
 				<li><a href="index.html" class="btn-large btn-flat waves-effect waves-light grey darken-4">Home</a></li>
-        		<li><a href="/portfolio/index.html" class="btn-large btn-flat waves-effect waves-light grey darken-4">Portfolio</a></li>
+        		<li><a href="./portfolio/index.html" class="btn-large btn-flat waves-effect waves-light grey darken-4">Portfolio</a></li>
 				<li><a href="https://medium.com/@chrispanican/" class="btn-large btn-flat waves-effect waves-light grey darken-4">Blog</a></li>
 				<li><a href="contact.html" id="button" class="btn-large btn-flat waves-effect waves-light grey darken-4">Contact</a></li>
 			</ul>
             
 			<ul id="nav-mobile" class="side-nav">
 				<li><a href="index.html">Home</a></li>
-        		<li><a href="/portfolio/index.html">Portfolio</a></li>
+        		<li><a href="./portfolio/index.html">Portfolio</a></li>
 				<li><a href="https://medium.com/@chrispanican/">Blog</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
@@ -67,7 +72,7 @@
 <!-- SideNav mobile -->
     <div id="sidenav2" class="collection hide-on-large-only sidenav table-of-contents" >
         <ul>
-            <li ><a id="mobile-navbuttons" href="#index-banner" class="btn grey lighten-2 waves-effect"><i id="mobile-sidenav" class="material-icons brown-text">publish</i></a></li>
+            <li><a id="mobile-navbuttons" href="#index-banner" class="btn grey lighten-2 waves-effect"><i id="mobile-sidenav" class="material-icons brown-text">publish</i></a></li>
             <li><a id="mobile-navbuttons" href="#about-me" class="btn grey lighten-2 waves-effect waves-light"><i id="mobile-sidenav" class="material-icons brown-text">perm_identity</i></a></li>
             <li><a id="mobile-navbuttons" href="#education" class="btn grey lighten-2 waves-effect"><i id="mobile-sidenav" class="material-icons brown-text">school</i></a></li>
             <li><a id="mobile-navbuttons" href="#skills" class="btn grey lighten-2 waves-effect"><i id="mobile-sidenav" class="material-icons brown-text">code</i></a></li>
@@ -85,11 +90,11 @@
 					<h5 class="header col s12" style="font-size:40px;">to my website</h5>
 				</div>
 				<div id="bg1-arrow" class="row center">
-					<a href="#about-me"><img src="/images/down-arrow.png"></a>
+					<a href="#about-me"><img src="./images/down-arrow.png"></a>
 				</div>
 			</div>
 		</div>
-		<div class="parallax"><img src="/images/bannerbg.jpg"></div>
+		<div class="parallax"><img src="./images/bannerbg.jpg"></div>
 	</div>
     
 <!-- About me -->
@@ -99,12 +104,12 @@
 			<!--   Icon Section   -->
 			<div class="row">
 				<div class="col s12 m6 center-align" style="padding: 10px 20px 10px 20px">
-					<img src="images/selfie.jpg" alt="A picture of me!" class="responsive-img " style="width:270px;">
+					<img src="./images/selfie.jpg" alt="A picture of me!" class="responsive-img " style="width:270px;">
 					<div class="center light" style="font-size:20px; padding: 0px 20px 0px 20px;">
                         <h2 class="center brown-text"><i class="medium material-icons">perm_identity</i></h2>
                         <p class="light">
                             Chris Panican<br>
-                            21 years old<br>
+                            <span id="myAge"></span> years old<br>
                             Queens, New York<br>
                             <a href="https://www.ccny.cuny.edu/" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Go to ccny.cuny.edu">The City College of New York <i class="tiny material-icons ">search</i></a>
                             <br>
@@ -115,7 +120,7 @@
                     <div class="icon-block">
                         <h2 class="center brown-text"><i class="material-icons">info</i></h2>
                         <p class="light">
-							I am a student at the City College of New York majoring in Computer Science. As a third-year undergraduate student, I'm still learning the foundations of programming and currently finding myself enjoying full-stack development. Right now, I am looking for more internships so I can learn new stuff from great people in this field and discover more things that interests me. I grew up in the Philippines, and moved to New York when I was 15 years old. Besides computers, I also love to eat cuisines from different countries found in five boroughs of NYC.
+							As a fourth-year undergrad, I've learned important computer science foundations and theories. But most importantly, I learned how to make cool stuff with a team or just my myself. Im currently finding myself enjoying full-stack development and worked on multiple projects. Right now, I am looking for more internships so I can learn new stuff from great people in this field and discover more things that interests me. I grew up in the Philippines, and moved to New York when I was 15 years old. Besides computers, I also love to eat cuisines from different countries found in five boroughs of NYC.
 						</p>
 					</div>
 				</div>
@@ -126,7 +131,7 @@
 <!-- Education -->
     <div class="parallax-container valign-wrapper">
         <div class="parallax">
-            <img src="/images/bannerbg2.jpg">
+            <img src="./images/bannerbg2.jpg">
         </div>
     </div>
     <div id="education" class="container scrollspy">
@@ -138,17 +143,18 @@
                     <p style="font-size: 25px"><b>College</b>: <br>
                         The City College of New York<br>
                         <i style="font-size: 18px">(August 2015 - Present)</i><br>
+                        <i style="font-size: 18px">Expected Fall 2019</i><br>
                         <a href="https://www.ccny.cuny.edu/" target="_blank" class="btn-floating waves-effect waves-light brown tooltipped" data-position="bottom" data-delay="50" data-tooltip="Go to ccny.cuny.edu"><i class="small material-icons">search</i></a>
                         <a href="https://goo.gl/maps/pecSYSso2ik" target="_blank" class="btn-floating waves-effect waves-light brown tooltipped" data-position="bottom" data-delay="50" data-tooltip="Opens Google Maps"><i class="small material-icons">location_on</i></a>
                     </p>
                 </div>
                 <div class="col s12 m6 l6 center">
                     <p class="left-align light">
-                        I am currently a junior pursuing a degree in Computer Science. Although having a good GPA is one of my priorities, having real world experience is my focus right now. 
+                        I am currently a senior pursuing a degree in Computer Science. Although having a good GPA is one of my priorities, having real world experience is my focus right now. 
                     </p>
                     <h5>Relevant Courses Taken</h5>
                     <p class="left-align light">
-                    	Data Structures, Algorithms, Discrete Math Structures, Fund. of Computer Systems, Software Design
+                    	Data Structures, Algorithms, Discrete Math, Computer Systems, Software Engineering, Web Design, Cybersecurity, Databases, Machine Learning, Artificial Intelligence
                     </p>
                 </div>
             </div>
@@ -178,7 +184,7 @@
 <!-- Skills -->
     <div class="parallax-container valign-wrapper">
         <div class="parallax">
-            <img src="images/bannerbg3.jpg">
+            <img src="./images/bannerbg3.jpg">
         </div>
     </div>
     <div id="skills" class="container scrollspy">
@@ -186,20 +192,20 @@
             <h2 id="title-headers">Skills</h2>
             <h2 class="center brown-text"><i class="medium material-icons">code</i></h2>
             <h4 class="center">Languages</h4>
-            <p class="center">Python, C++ and Java</p>
+            <p class="center">JavaScript, Python, C++, Java</p>
             <h2 class="center brown-text"><i class="medium material-icons">http</i></h2>
             <h4 class="center">Technologies</h4>
-            <p class="center">HTML5, CSS3, JavaScript, Flask, SQL, Bootstrap, Materialize, Solr, Docker</p>
+            <p class="center">React.js, Redux, Node.js, HTML, CSS, MySQL, Solr, Docker, TravisCI, Flask, Bootstrap, Materialize, Express, Pandas</p>
             <h2 class="center brown-text"><i class="medium material-icons">phonelink</i></h2>
             <h4 class="center">Software / IDE's</h4>
-            <p class="center">Microsoft Office, Adobe Photoshop, PyCharm, CLion, Brackets, Sublime, Android Studio</p>
+            <p class="center">VS Code, Sublime, PyCharm, CLion, Brackets, Microsoft Office, Adobe Photoshop, Android Studio</p>
         </div>
     </div>
     
 <!-- Experience -->
     <div class="parallax-container valign-wrapper">
         <div class="parallax">
-            <img src="/images/bannerbg4.jpg" alt="Unsplashed background img 3">
+            <img src="./images/bannerbg4.jpg" alt="Unsplashed background img 3">
         </div>
     </div>  
     <div id="experience" class="container scrollspy">
@@ -211,7 +217,7 @@
                     <p style="font-size: 25px"><b>Front-end Developer Intern</b>: <br>
                         <a href="https://flow.io/" target="_blank">Flow Commerce</a>
                         <br>
-                        <i style="font-size: 18px">(February 2018 - Present)</i><br>
+                        <i style="font-size: 18px">(February 2018 - January 2019)</i><br>
                     </p>
                 </div>
                 <div class="col s12 m6 l6 center">
@@ -298,7 +304,7 @@
                     There are still a ton of unfinished projects in Github, but I usually work on them whenever I have some free time! My portfolio page has the projects that I finished.
                 </p>
                 <a href="https://github.com/cpanican" target="_blank" class="btn-large waves-effect waves-light">Github</a>
-                <a href="/portfolio/" class="btn-large waves-effect waves-light">Portfolio</a>
+                <a href="./portfolio/index.html" class="btn-large waves-effect waves-light">Portfolio</a>
             </div>
             <hr>
 		</div>
@@ -307,7 +313,7 @@
 <!-- Hobbies -->
     <div class="parallax-container valign-wrapper">
         <div class="parallax">
-            <img src="/images/bannerbg5.jpg" alt="Unsplashed background img 3">
+            <img src="images/bannerbg5.jpg" alt="Unsplashed background img 3">
         </div>
     </div>
     <div id="hobbies" class="container scrollspy">
