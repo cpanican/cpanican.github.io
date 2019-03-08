@@ -67,12 +67,32 @@ a {
 	cursor: pointer
 }
 
+/* Button styles */
 .btn-flat {
 	color: white;
 }
 
 .btn-flat:hover {
 	box-shadow: 0 0 2px white ;
+}
+
+.btn:focus, .btn-large:focus,
+.btn-floating:focus {
+  background-color: #333;
+}
+
+.btn, .btn-large {
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #808080;
 }
 
 #bg1-text {
