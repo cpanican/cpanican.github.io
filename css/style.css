@@ -1,209 +1,25 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
-nav ul a,
-nav .brand-logo {
-    color: #ccc;
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-nav {
-    height: 58px;
-    line-height: 58px;
+.bg {
+	background-image: url("../images/background.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
-    height: 58px;
-    line-height: 58px;
+#main-texts {
+	position: relative;
+	top: 100px;
 }
 
-nav .button-collapse {
-    height: 58px;
-    line-height: 58px;
-}
-
-nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
-	margin-left: 0px;
-    margin-right: 1px;
-}
-
-nav .brand-logo { 
-    font-size: 1.6rem; 
-}
-
-@media only screen and (min-width: 601px){
-    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-        height: 58px;
-        line-height: 58px;
-    }
-}
-
-.sidenav {
-    background-color: white;
-    border-color: #ccc;
-    top: 30%;
-    right: 2%;
-    position: fixed;
-    padding-right: 15px;
-}
-
-.sidenav .section {
-    padding: 0px 0px 0px 0px;
-}
-
-.sidenav ul li {
-    margin-top: 10px; 
-}
-
-#sidenav2 ul li {
-    margin-top: 5px; 
-}
-
-a {
-	cursor: pointer
-}
-
-/* Button styles */
-.btn-flat {
-	color: white;
-}
-
-.btn-flat:hover {
-	box-shadow: 0 0 2px white ;
-}
-
-.btn:focus, .btn-large:focus,
-.btn-floating:focus {
-  background-color: #333;
-}
-
-.btn, .btn-large {
-  text-decoration: none;
-  color: #fff;
-  background-color: #333;
-  text-align: center;
-  letter-spacing: .5px;
-  transition: .2s ease-out;
-  cursor: pointer;
-}
-
-.btn:hover, .btn-large:hover {
-    background-color: #808080;
-}
-
-#bg1-text {
-	margin-top: 8em;
-}
-
-#bg1-arrow {
-	margin-top: 8em;
-}
-
-#title-headers {
-	color: white;
-	font-size: 30px;
-	padding: 10px;
-	text-align:center;
-	background-color: #1a1a1a;
-}
-
-p {
-    line-height: 2em;
-    font-size:20px;
-}
-
-.button-collapse {
-    color: #26a69a;
-}
-
-.parallax-container {
-    min-height: 350px;
-    line-height: 0;
-    height: auto;
-    color: rgba(255,255,255,.9);
-}
-
-.parallax-container .section {
-    width: 100%;
-}
-
-@media only screen and (max-width : 992px) {
-    .parallax-container .section {
-        position: absolute;
-        top: 40%;
-    }
-    #index-banner .section {
-        top: 7%;
-    }
-}
-
-@media only screen and (max-width : 600px) {
-    #index-banner .section {
-        top: 5%;
-    }
-}
-
-.icon-block {
-    padding: 0 15px;
-}
-.icon-block .material-icons {
-    font-size: inherit;
-}
-
-footer.page-footer {
-    margin: 0;
-}
-
-#index-banner {
-    min-height: 700px;
-}
-
-#sidenav2 {
-    background-color: transparent;
-    border-color: transparent;
-    opacity: .8;
-    top: 20%;
-    right: -2%;
-    position: fixed;
-    padding-right: 0;
-}
-
-#mobile-sidenav {
-    margin-left: -10px;
-    vertical-align: middle;
-    line-height: 30px;
-}
-#mobile-navbuttons {
-    height: 30px;
-    width: 15px;
-}
-
-#contact-form {
-    font-size: 1.5em;
-}
-
-#contact-input {
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 10px;
-}
-#portfolio {
-    padding: 10px 10px 5px 10px;
-}
-
-.slider .slides li img {
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-}
-#port-img {
-    padding: 5px 0px 5px 0px;
-}
-
-/* Changes the line size in forms (contact page) */
-input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
-    width: 90%;
+#main-title {
+	font-family: "Lucida Console";
+	color: black;
+	font-size: 50px;
+	margin-bottom: 10px;
 }
