@@ -4,14 +4,6 @@ body, html {
 	padding: 0;
 }
 
-.bg {
-	background-image: url("../images/background.jpg");
-	height: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
 #main-texts {
 	position: relative;
 	top: 100px;
